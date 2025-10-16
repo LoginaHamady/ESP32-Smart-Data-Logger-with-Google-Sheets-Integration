@@ -7,7 +7,7 @@ function doPost (e) {
  
   new Data(),                     // Timestamp
   data.smokePPM,            //Smoke PPM value
-  data.heatRate,                // Heat Rate value
+  data.heartRate,                // Heart Rate value
   data.noise                       // Noise level
 ]);
 

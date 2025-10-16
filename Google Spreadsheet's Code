@@ -1,0 +1,15 @@
+// Code of Appscript in (JavaScript):
+function doPost (e) {
+ var sheet = SpreadsheetApp.getActiveSpreadsheet().getActivesheet();
+ var data = JSON.parse(e.PostData.contents); // Parse the incoming JSON data
+ // Append data to the sheet
+ sheet.appendRow([
+ 
+  new Data(),                     // Timestamp
+  data.smokePPM,            //Smoke PPM value
+  data.heatRate,                // Heat Rate value
+  data.noise                       // Noise level
+]);
+
+return ContentService. create TextOutput(“ Data added successfully”);
+}
